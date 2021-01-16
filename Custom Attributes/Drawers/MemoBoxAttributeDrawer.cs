@@ -38,17 +38,7 @@ namespace Rito.CustomAttributes
             Rect boxRect = new Rect(boxX, boxY, boxWidth, boxHeight);
 
             Color textColor = EColorConverter.Convert(Atr.TextColor);
-            Color boxColor = EColorConverter.Convert(Atr.BoxColor);//.Ex_SetAlpha(0.8f);
-
-            // Color Picker(Option)
-            //if (Atr.UseColorPicker)
-            //{
-            //    textColor = EditorGUI.ColorField(new Rect(textX + textWidth - 32f, textY, 20f, 16f),
-            //        GUIContent.none, textColor, false, true, false);
-
-            //    boxColor = EditorGUI.ColorField(new Rect(textX + textWidth - 11f, textY, 20f, 16f),
-            //        GUIContent.none, boxColor, false, true, false);
-            //}
+            Color boxColor = EColorConverter.Convert(Atr.BoxColor);
 
             EditorGUI.DrawRect(boxRect, boxColor);
 

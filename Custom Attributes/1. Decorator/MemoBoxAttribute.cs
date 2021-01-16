@@ -26,9 +26,6 @@ namespace Rito.CustomAttributes
 
         public bool BoldText { get; set; } = false;
 
-        // 색상 직접 결정할 수 있게 해주는 색상 선택 도구 노출
-        //public bool UseColorPicker { get; set; } = true;
-
         public MemoBoxAttribute(params string[] contents)
             => Contents = contents;
     }

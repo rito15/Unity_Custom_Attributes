@@ -13,8 +13,9 @@ namespace Rito.CustomAttributes
         /// <summary> 인포, 경고 박스를 표시할지 여부 </summary>
         public bool ShowMessageBox { get; set; } = true;
 
-        public RequiredAttribute() { }
+        /// <summary> Null일 때 디버그 에러를 호출할지 여부 </summary>
+        public bool ShowLogError { get; set; } = false;
 
-        public RequiredAttribute(bool showMessageBox) => ShowMessageBox = showMessageBox;
+        public RequiredAttribute() { }
     }
 }

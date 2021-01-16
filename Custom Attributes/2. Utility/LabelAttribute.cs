@@ -11,12 +11,12 @@ namespace Rito.CustomAttributes
     
     public class LabelAttribute : PropertyAttribute
     {
-        public string Label { get; private set; }
+        public string Text { get; private set; }
         public EColor TextColor { get; private set; } = EColor.White;
 
         
 
-        public LabelAttribute(string label) => Label = label;
-        public LabelAttribute(string label, EColor color) : this(label) => TextColor = color;
+        public LabelAttribute(string text) => Text = text;
+        public LabelAttribute(string text, EColor color) : this(text) => TextColor = color;
     }
 }

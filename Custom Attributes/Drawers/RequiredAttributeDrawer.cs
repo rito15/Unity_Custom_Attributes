@@ -75,6 +75,10 @@ namespace Rito.CustomAttributes
 
                     EditorHelper.ColorErrorBox(firstThird, "[Required Component]");
                     rect = midThird;
+
+                    if (Atr.ShowLogError)
+                        Debug.LogError($"[Required Component] - GameObject : {property.serializedObject.targetObject.name}, " +
+                            $"Field : {fieldInfo.Name}");
                 }
                 contentColor = new Color(1f, 0.3f, 0.2f);
             }

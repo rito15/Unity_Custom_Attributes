@@ -258,9 +258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1523aa2a8b01ba3498e7f034fb81dab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredGo: {fileID: 705507993}
-  requiredCol: {fileID: 0}
-  requiredTr: {fileID: 0}
+  requiredGameObject: {fileID: 963194225}
+  requiredCollider: {fileID: 0}
+  requiredTransform: {fileID: 0}
+  requiredRigidbody: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

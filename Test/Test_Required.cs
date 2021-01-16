@@ -10,11 +10,14 @@ using Rito.CustomAttributes;
 public class Test_Required : MonoBehaviour
 {
     [Required]
-    public GameObject requiredGo;
+    public GameObject requiredGameObject;
 
     [Required]
-    public Collider requiredCol;
+    public Collider requiredCollider;
 
-    [Required(showMessageBox: false)]
-    public Transform requiredTr;
+    [Required(ShowMessageBox = false)]
+    public Transform requiredTransform;
+
+    //[Required(ShowLogError = true)]
+    public Rigidbody requiredRigidbody;
 }

@@ -38,7 +38,7 @@ namespace Rito.CustomAttributes
             EditorStyles.label.focused.textColor = textColor;
 
             // 3. 원하는 컨트롤에 적용
-            EditorGUI.PropertyField(position, property, new GUIContent(Atr.Label), true);
+            EditorGUI.PropertyField(position, property, new GUIContent(Atr.Text), true);
 
             // 4. 다시 예전 스타일 복원
             EditorStyles.label.normal.textColor = old1;
