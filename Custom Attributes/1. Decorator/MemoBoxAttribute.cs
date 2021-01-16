@@ -20,8 +20,8 @@ namespace Rito.CustomAttributes
         public float MarginTop { get; set; } = 5f;
         public float MarginBottom { get; set; } = 5f;
 
-        /// <summary> Top, Bottom Padding </summary>
-        public float Padding { get; set; } = 5f;
+        public float PaddingTop { get; set; } = 5f;
+        public float PaddingBottom { get; set; } = 5f;
         public float PaddingLeft { get; set; } = 5f;
 
         public bool BoldText { get; set; } = false;

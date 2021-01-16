@@ -18,13 +18,13 @@ namespace Rito.CustomAttributes
         public override float GetHeight()
         {
             float contentHeight = Atr.Contents.Length * LineHeight;
-            return contentHeight + Atr.MarginTop + Atr.MarginBottom + Atr.Padding * 2f;
+            return contentHeight + Atr.MarginTop + Atr.MarginBottom + Atr.PaddingTop + Atr.PaddingBottom;
         }
 
         public override void OnGUI(Rect position)
         {
             float textHeight = Atr.Contents.Length * LineHeight;
-            float boxHeight = textHeight + Atr.Padding * 2f;
+            float boxHeight = textHeight + Atr.PaddingTop + Atr.PaddingBottom;
 
             float boxWidth = position.width;
             float textWidth = boxWidth - Atr.PaddingLeft;
@@ -33,7 +33,7 @@ namespace Rito.CustomAttributes
             float textX = boxX + Atr.PaddingLeft;
 
             float boxY = position.y + Atr.MarginTop;
-            float textY = boxY + Atr.Padding;
+            float textY = boxY + Atr.PaddingTop;
 
             Rect boxRect = new Rect(boxX, boxY, boxWidth, boxHeight);
 
