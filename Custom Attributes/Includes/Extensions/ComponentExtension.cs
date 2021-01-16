@@ -23,7 +23,6 @@ namespace Rito.CustomAttributes
         /// </summary>
         public static Component Ex_GetComponentInChildrenOnly(this Component @this, Type targetType)
         {
-            Component targetComponent = null;
             Transform transform = @this.transform;
 
             if (transform.childCount.Equals(0))
@@ -32,7 +31,7 @@ namespace Rito.CustomAttributes
             int childCount = transform.childCount;
             for (int i = 0; i < childCount; i++)
             {
-                targetComponent = transform.GetChild(0).GetComponentInChildren(targetType);
+                var targetComponent = transform.GetChild(i).GetComponentInChildren(targetType);
                 if (targetComponent != null)
                     return targetComponent;
             }
@@ -51,6 +50,30 @@ namespace Rito.CustomAttributes
                 return null;
 
             return transform.parent.GetComponentInParent(targetType);
+        }
+
+        /// <summary> 비활성화된 게임오브젝트를 포함하여 모든 자식 게임오브젝트에서 컴포넌트 찾기 </summary>
+        public static Component Ex_GetComponentInAllChildren(this Component @this, Type targetType)
+        {
+            List<Transform> childrenTrList = new List<Transform>();
+            Recur_GetAllChildrenTransform(childrenTrList, @this.transform);
+
+            foreach (var tr in childrenTrList)
+            {
+                var found = tr.GetComponent(targetType);
+                if (found != null)
+                    return found;
+            }
+            return null;
+        }
+        public static void Recur_GetAllChildrenTransform(List<Transform> trList, Transform tr)
+        {
+            trList.Add(tr);
+            int childCount = tr.childCount;
+            for (int i = 0; i < childCount; i++)
+            {
+                Recur_GetAllChildrenTransform(trList, tr.GetChild(i));
+            }
         }
     }
 }

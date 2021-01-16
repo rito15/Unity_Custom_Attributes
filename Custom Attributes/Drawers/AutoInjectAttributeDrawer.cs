@@ -42,7 +42,8 @@ namespace Rito.CustomAttributes
                 }
 
                 // 그 외의 경우, 인스펙터에 큼지막한 에러 박스
-                EditorHelper.ColorErrorBox(ErrorRect, $"Error : Component를 상속하는 타입에만 사용할 수 있습니다\n대상 타입 : {fieldType}");
+                EditorHelper.ColorErrorBox(ErrorRect, $"Error : Component를 상속하는 타입에만 사용할 수 있습니다\n" +
+                    $"이름 : {fieldInfo.Name}, 타입 : {fieldType}");
                 return;
             }
 
@@ -83,6 +84,10 @@ namespace Rito.CustomAttributes
 
                     case EInjection.GetComponentInChildrenOnly:
                         property.objectReferenceValue = target.Ex_GetComponentInChildrenOnly(fieldType);
+                        break;
+
+                    case EInjection.GetComponentInAllChildren:
+                        property.objectReferenceValue = target.Ex_GetComponentInAllChildren(fieldType);
                         break;
 
                     case EInjection.GetComponentInparent:
