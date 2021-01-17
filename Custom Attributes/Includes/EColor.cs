@@ -45,6 +45,7 @@ namespace Rito.CustomAttributes
                 case EColor.Violet: return Colors.Violet;
                 case EColor.Lime: return Colors.Lime;
                 case EColor.Mint: return Colors.Mint;
+                case EColor.Cyan: return Colors.Cyan;
                 case EColor.Sky: return Colors.Sky;
 
                 case EColor.LightRed: return Colors.LightRed;
@@ -110,6 +111,7 @@ namespace Rito.CustomAttributes
         Violet,
         Lime,
         Mint,
+        Cyan,
         Sky,
 
         LightRed,

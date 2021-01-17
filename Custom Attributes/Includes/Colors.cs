@@ -16,6 +16,7 @@ namespace Rito.CustomAttributes
         public static readonly Color Violet      = new Color(0.50f, 0.00f, 1.00f);
         public static readonly Color Lime        = new Color(0.75f, 1.00f, 0.00f);
         public static readonly Color Mint        = new Color(0.00f, 1.00f, 0.50f);
+        public static readonly Color Cyan        = new Color(0.00f, 1.00f, 1.00f);
         public static readonly Color Sky         = new Color(0.00f, 1.00f, 1.00f);
 
         public static readonly Color LightRed    = new Color(1.00f, 0.50f, 0.50f);
