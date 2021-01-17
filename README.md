@@ -102,6 +102,7 @@
 
 # [7] ProgressBar
 - 현재 필드의 값 및 지정 최댓값을 가로 막대 형태로 표시합니다.
+- int, float, double 타입의 필드에 동작합니다.
 
 |매개변수|설명|
 |---|---|
@@ -125,10 +126,10 @@
 
 
 # [9] SpaceTop
-- 프로퍼티의 상단 여백을 지정합니다. (기본 : 9f)
+- 프로퍼티의 상단 여백을 지정합니다. (기본 : 9)
 <img src="https://user-images.githubusercontent.com/42164422/104818139-01351b00-5869-11eb-8ceb-e72dc88cf83a.png" width="500">
 
 
 # [10] SpaceBottom
-- 프로퍼티의 하단 여백을 지정합니다. (기본 : 9f)
+- 프로퍼티의 하단 여백을 지정합니다. (기본 : 9)
 <img src="https://user-images.githubusercontent.com/42164422/104818141-02fede80-5869-11eb-85ff-2c1b572f1ad8.png" width="500">
