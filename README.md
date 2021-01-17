@@ -4,8 +4,8 @@
 
 
 ------
-# [1] MemoBox
-- 프로퍼티의 상단에 상자 및 메모를 표시합니다.
+# MemoBox
+- 필드의 상단에 상자 및 메모를 표시합니다.
 
 |매개변수|설명|
 |---|---|
@@ -24,7 +24,22 @@
 <img src="https://user-images.githubusercontent.com/42164422/104818128-f7abb300-5868-11eb-873b-2dd9d333254f.PNG" width="500">
 
 
-# [2] MethodButton
+# BoxHeader
+- 여러 개의 필드를 묶어주는 상자를 표시합니다.
+- 펼치고 접는 형태의 필드에는 사용을 권장하지 않습니다.
+
+|매개변수|설명|
+|---|---|
+|HeaderText|상자 헤더 부분에 표시할 텍스트|
+|FieldCount|묶어줄 필드의 개수|
+|HeaderColor|상자 헤더 텍스트의 색상 (기본 : White)|
+|BoxColor|상자의 색상 (기본 : Black)|
+|Alpha|상자 필드 부분의 투명도 (기본 : 0.4)|
+|BottomHeight|상자 영역의 높이 추가 조정 (기본 : 0)|
+
+<img src="https://user-images.githubusercontent.com/42164422/104834749-d7b9d500-58e4-11eb-9cf5-22145d0e139e.png" width="500">
+
+# MethodButton
 - 클릭할 경우 메소드를 호출하는 버튼을 표시합니다.
 - 해당 클래스 내에 존재하는 메소드만 호출할 수 있습니다.
 
@@ -37,13 +52,13 @@
 |TextSize|글자 크기 (기본 : 12)|
 |WidthRatio|버튼 가로 너비의 비율(0.0f ~ 1.0f, 기본 : 1.0f)|
 |Height|버튼 높이 (기본 : 18)|
-|PropertyPlacement|프로퍼티 표시 방법 (Hidden : 숨기기, Top : 버튼의 상단, Bottom : 버튼의 하단, 기본 : Hidden)|
+|PropertyPlacement|필드 표시 방법 (Hidden : 숨기기, Top : 버튼의 상단, Bottom : 버튼의 하단, 기본 : Hidden)|
 |HorizontalAlignment|버튼의 가로 정렬 방법 (Left : 좌측 정렬, Center : 중앙 정렬, Right : 우측 정렬, 기본 : Center)|
 
 <img src="https://user-images.githubusercontent.com/42164422/104818130-f9757680-5868-11eb-86f6-2fd523769330.png" width="500">
 
 
-# [3] AutoInject
+# AutoInject
 - 컴포넌트 타입에 사용할 수 있습니다.
 - 필드의 타입을 자동으로 인식하여, 컴포넌트를 찾아 초기화시켜주는 기능을 수행합니다.
 - 성공한 경우 녹색 메시지박스, 실패한 경우 노란색 메시지박스, 타입이 일치하지 않는 경우 붉은색 메시지박스를 표시합니다.
@@ -69,7 +84,7 @@
 <img src="https://user-images.githubusercontent.com/42164422/104818397-b4eada80-586a-11eb-903f-3f04994498fc.png" width="500">
 
 
-# [4] Required
+# Required
 - 컴포넌트 타입에 사용할 수 있습니다.
 - 해당 필드가 null인 경우, 경고를 표시합니다.
 
@@ -81,14 +96,14 @@
 <img src="https://user-images.githubusercontent.com/42164422/104821345-6a735900-587e-11eb-8b09-cd0877db763e.png" width="500">
 
 
-# [5] LayerDropdown, TagDropdown
+# LayerDropdown, TagDropdown
 - 각각 레이어 및 태그를 선택할 수 있는 드롭다운 메뉴를 표시합니다.
 - LayerDropdown 애트리뷰트는 string, int타입의 필드에 사용할 수 있습니다.
 - TagDropdown 애트리뷰트는 string 타입의 필드에 사용할 수 있습니다.
 <img src="https://user-images.githubusercontent.com/42164422/104818134-fc706700-5868-11eb-96df-2a80d909492c.png" width="500">
 
 
-# [6] Readonly
+# Readonly
 - 인스펙터에 해당 필드를 수정할 수 없도록 비활성화된 채로 표시합니다.
 - 비활성화되는 타이밍을 지정할수있습니다.
 
@@ -100,7 +115,7 @@
 <img src="https://user-images.githubusercontent.com/42164422/104818135-fd08fd80-5868-11eb-8692-57d61416fba5.png" width="500">
 
 
-# [7] ProgressBar
+# ProgressBar
 - 현재 필드의 값 및 지정 최댓값을 가로 막대 형태로 표시합니다.
 - int, float, double 타입의 필드에 동작합니다.
 
@@ -114,8 +129,8 @@
 <img src="https://user-images.githubusercontent.com/42164422/104818137-fe3a2a80-5868-11eb-9921-e2d2f5d8c22b.png" width="500">
 
 
-# [8] Label
-- 프로퍼티의 텍스트 및 색상을 지정합니다.
+# Label
+- 필드의 텍스트 및 색상을 지정합니다.
 - 배열 및 클래스 형태의 필드에는 적용되지 않습니다.
 
 |매개변수|설명|
@@ -125,11 +140,11 @@
 <img src="https://user-images.githubusercontent.com/42164422/104818138-ff6b5780-5868-11eb-8cbb-2cb456aa52ba.png" width="500">
 
 
-# [9] SpaceTop
-- 프로퍼티의 상단 여백을 지정합니다. (기본 : 9)
+# SpaceTop
+- 필드의 상단 여백을 지정합니다. (기본 : 9)
 <img src="https://user-images.githubusercontent.com/42164422/104818139-01351b00-5869-11eb-8ceb-e72dc88cf83a.png" width="500">
 
 
-# [10] SpaceBottom
-- 프로퍼티의 하단 여백을 지정합니다. (기본 : 9)
+# SpaceBottom
+- 필드의 하단 여백을 지정합니다. (기본 : 9)
 <img src="https://user-images.githubusercontent.com/42164422/104818141-02fede80-5869-11eb-85ff-2c1b572f1ad8.png" width="500">
